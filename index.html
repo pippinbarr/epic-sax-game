@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
+  <link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon.png">
+
+  <title>Epic Sax Game</title>
+
+  <!-- CSS stylesheet(s) -->
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+  <!-- Libraries -->
+  <script src="ruffle/ruffle.js"></script>
+</head>
+
+<body>
+  <div id="container"></div>
+  <script>
+    window.RufflePlayer = window.RufflePlayer || {};
+
+    window.RufflePlayer.config = {
+      "warnOnUnsupportedContent": false,
+      "splashScreen": false,
+      "autoplay": "on",
+      "unmuteOverlay": "hidden"
+    };
+
+    window.addEventListener("load", (event) => {
+      const ruffle = window.RufflePlayer.newest();
+      const player = ruffle.createPlayer();
+      const container = document.getElementById("container");
+      container.appendChild(player);
+      player.load("export/EpicSaxGame.swf");
+      player.style.width = "640px";
+      player.style.height = "480px";
+    });
+  </script>
+
+  <!-- FOR PIPPINBARR.COM -->
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GECKZQ62DH"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-GECKZQ62DH');
+  </script>
+</body>
+
+</html>
